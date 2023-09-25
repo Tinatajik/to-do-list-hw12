@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="bumblebee">
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSBaq9XuaYT59Ybm3sBRc0p6C4L7nglQHwDQ&usqp=CAU">
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.18.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="/dist/output.css" rel="stylesheet">
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="res/favicon.svg" />
+    <title>Home page</title>
+  </head>
+  <body>
+    <div class="container-header--nav">
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="/todos/todos.html">Todos</a></li>
+        </ul>
+      </nav>
+  </div>
+    <div class="container">
+      <form id="create-product">
+      <header>
+        <h1>Todo List</h1>
+        <!-- Error message -->
+        <div class="alert-message"></div>
+        <div class="input-section inputs">
+          <form id="edit-form" class="form">
+          <label for="title" id="title-label">Title *</label>
+          <input
+          name="title"
+            type="text"
+            id="title"
+            placeholder="Add a todo . . ."
+            class="input input-bordered input-secondary w-full max-w-xs"
+            required
+          /><span id="required-title">The title is required</span>
+          <label for="description">Description</label>
+          <input
+          name="description"
+            type="text"
+            id="description"
+            placeholder="Some information . . ."
+            class="input input-bordered input-secondary w-full max-w-xs"
+          
+          />
+          <label for="dueDate" id="dueDate-label">Due Date *</label>
+          <input
+          name="dueDate"
+            type="date"
+            id="dueDate"
+            class="input input-bordered input-secondary w-full max-w-xs schedule-date"
+            required
+          /> <span id="required-dueDate">The date is required</span>
+          <button class="btn btn-secondary add-task-button" type="submit" id="submit"  class="btn__submit">
+            <i class="bx bx-plus bx-sm"></i>
+          </button>
+          </form>
+        </form>
+        </div>
+        
+      </header>
+
+      <!-- <div class="todos-filter">
+        <div class="dropdown">
+          <label tabindex="0" class="btn m-1">Filter</label>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li onclick="filterTodos('all')"><a>All</a></li>
+            <li onclick="filterTodos('pending')"><a>Pending</a></li>
+            <li onclick="filterTodos('completed')"><a>Completed</a></li>
+          </ul>
+        </div>
+        <button class="btn btn-secondary delete-all-btn">Delete All</button>
+      </div>
+
+      <table class="table w-full">
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="todos-list-body"></tbody>
+      </table>
+    </div> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
